@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Elements</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <header class="max-w-screen-lg py-7 mx-auto">
+    <nav>
+        <div class="navbar bg-base-100 shadow-sm">
+            <div class="navbar-start">
+                <img src="images/logo.png" alt="">
+                <a class="btn btn-ghost text-xl">Dev<span class="text-2xl font-bold">Board</span></a>
+            </div>
+            
+            <div class="navbar-end">
+              <a href="./index.html" id="mybutton" class="btn bg-blue-600 text-white ">Back to Desk</a>
+            </div>
+          </div>
+    </nav>
+  </header>
+
+  <!-- text parts -->
+   <section class="max-w-screen-lg py-7 mx-auto">
+  <h1 class="text-2xl text-center font-bold">Blogs</h1>
+  <div class="collapse collapse-plus bg-base-100 border border-base-300 mt-6">
+    <input type="radio" name="my-accordion-3" checked="checked" />
+    <div class="collapse-title font-semibold">What are the different ways to select an element in the DOM?</div>
+    <div class="collapse-content text-sm text-gray-700">1.Using getElementById:
+        2.Using getElementsByClassName: ...
+        3.Using getElementsByTagName: ...
+        4.Using querySelector: ...
+        5.Using querySelectorAll: ...
+        6.Changing the Text Content. ...
+        7.Changing the HTML Content. ...</div>
+  </div>
+  <div class="collapse collapse-plus bg-base-100 border border-base-300">
+    <input type="radio" name="my-accordion-3" />
+    <div class="collapse-title font-semibold">What is the differences between innerHTML,innerText and textContent?</div>
+    <div class="collapse-content text-sm">textContent is all text contained by an element and all its children that are for formatting purposes only. innerText returns all text contained by an element and all its child elements. innerHtml returns all text, including html tags, that is contained by an element.</div>
+  </div>
+  <div class="collapse collapse-plus bg-base-100 border border-base-300">
+    <input type="radio" name="my-accordion-3" />
+    <div class="collapse-title font-semibold">What is the Event Delegation in DOM?</div>
+    <div class="collapse-content text-sm">Event delegation in JavaScript is a pattern that efficiently handles events. Events can be added to a parent element instead of adding to every single element.</div>
+  </div>
+  <div class="collapse collapse-plus bg-base-100 border border-base-300">
+    <input type="radio" name="my-accordion-3" />
+    <div class="collapse-title font-semibold">What is the Event Bubbling in DOM?</div>
+    <div class="collapse-content text-sm">The process of propagating events from the target element up to its parent elements in the DOM hierarchy.</div>
+  </div>
+  
+</section>
+
+<script src="js/recap.js"></script>
+
+</body>
+</html>
