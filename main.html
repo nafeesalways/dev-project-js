@@ -11,14 +11,15 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <header class="max-w-screen-lg py-7 mx-auto">
-      <nav>
-        <div class="navbar bg-base-100 shadow-sm">
+  <body class="min-h-screen bg-base-200">
+    <!-- Header Section -->
+    <header class="w-full px-4 py-4 md:py-7">
+      <div class="max-w-screen-2xl mx-auto">
+        <nav class="navbar bg-base-100 shadow-lg rounded-lg px-2 md:px-6">
           <div class="navbar-start">
-            <img src="images/logo.png" alt="" />
-            <a class="btn btn-ghost text-xl"
-              >Dev<span class="text-2xl font-bold">Board</span></a
+            <img src="images/logo.png" alt="Logo" class="w-8 h-8 md:w-10 md:h-10" />
+            <a class="btn btn-ghost text-lg md:text-xl ml-2"
+              >Dev<span class="text-xl md:text-2xl font-bold">Board</span></a
             >
           </div>
 
@@ -26,74 +27,201 @@
             <a
               href="./index.html"
               id="mybutton"
-              class="btn bg-blue-600 text-white"
+              class="btn bg-blue-600 text-white hover:bg-blue-700 text-sm md:text-base px-3 md:px-6"
               >Back to Desk</a
             >
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
 
-    <!-- text parts -->
-    <section class="max-w-screen-lg py-7 mx-auto">
-      <h1 class="text-2xl text-center font-bold">Blogs</h1>
-      <div
-        class="collapse collapse-plus bg-base-100 border border-base-300 mt-6"
-      >
-        <input type="radio" name="my-accordion-3" checked="checked" />
-        <div class="collapse-title font-semibold">
-          What are the different ways to select an element in the DOM?
+    <!-- Blogs/FAQ Section -->
+    <section class="w-full px-4 py-6 md:py-10">
+      <div class="max-w-screen-xl mx-auto">
+        <!-- Page Title -->
+        <div class="text-center mb-8 md:mb-12">
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-2">
+            Blogs
+          </h1>
+          <p class="text-sm md:text-base text-gray-600 mt-2">
+            Frequently Asked Questions about DOM Manipulation
+          </p>
         </div>
-        <div class="collapse-content text-sm text-gray-700">
-          1.Using getElementById: 2.Using getElementsByClassName: ... 3.Using
-          getElementsByTagName: ... 4.Using querySelector: ... 5.Using
-          querySelectorAll: ... 6.Changing the Text Content. ... 7.Changing the
-          HTML Content. ...
+
+        <!-- Accordion Container -->
+        <div class="space-y-3 md:space-y-4">
+          <!-- Question 1 -->
+          <div
+            class="collapse collapse-plus bg-base-100 shadow-md hover:shadow-lg transition-shadow rounded-lg"
+          >
+            <input type="radio" name="my-accordion-3" checked="checked" />
+            <div class="collapse-title text-sm md:text-base lg:text-lg font-semibold text-gray-800 pr-8">
+              What are the different ways to select an element in the DOM?
+            </div>
+            <div class="collapse-content">
+              <div class="text-xs md:text-sm lg:text-base text-gray-700 leading-relaxed pt-2">
+                <p class="mb-3">
+                  There are several methods to select DOM elements in JavaScript:
+                </p>
+                <ul class="list-disc list-inside space-y-2 ml-2">
+                  <li>
+                    <strong>getElementById():</strong> Selects a single element by its unique ID
+                  </li>
+                  <li>
+                    <strong>getElementsByClassName():</strong> Returns a collection of elements with a specific class name
+                  </li>
+                  <li>
+                    <strong>getElementsByTagName():</strong> Returns a collection of elements with a specific tag name
+                  </li>
+                  <li>
+                    <strong>querySelector():</strong> Returns the first element that matches a CSS selector
+                  </li>
+                  <li>
+                    <strong>querySelectorAll():</strong> Returns all elements that match a CSS selector
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div
+            class="collapse collapse-plus bg-base-100 shadow-md hover:shadow-lg transition-shadow rounded-lg"
+          >
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-sm md:text-base lg:text-lg font-semibold text-gray-800 pr-8">
+              What is the difference between innerHTML, innerText and textContent?
+            </div>
+            <div class="collapse-content">
+              <div class="text-xs md:text-sm lg:text-base text-gray-700 leading-relaxed pt-2">
+                <div class="space-y-3">
+                  <p>
+                    <strong>textContent:</strong> Returns all text contained by an element and all its children, including text that is hidden by CSS. It preserves formatting and spacing.
+                  </p>
+                  <p>
+                    <strong>innerText:</strong> Returns only the visible text contained by an element and its children, respecting CSS styling that hides elements.
+                  </p>
+                  <p>
+                    <strong>innerHTML:</strong> Returns all text including HTML tags and markup contained within the element. It can be used to insert HTML content.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div
+            class="collapse collapse-plus bg-base-100 shadow-md hover:shadow-lg transition-shadow rounded-lg"
+          >
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-sm md:text-base lg:text-lg font-semibold text-gray-800 pr-8">
+              What is Event Delegation in DOM?
+            </div>
+            <div class="collapse-content">
+              <div class="text-xs md:text-sm lg:text-base text-gray-700 leading-relaxed pt-2">
+                <p class="mb-3">
+                  Event delegation is a powerful JavaScript pattern that efficiently handles events by leveraging event bubbling. Instead of adding event listeners to multiple child elements, you add a single event listener to a parent element.
+                </p>
+                <p class="mb-2">
+                  <strong>Benefits:</strong>
+                </p>
+                <ul class="list-disc list-inside space-y-1 ml-2">
+                  <li>Reduces memory usage</li>
+                  <li>Works for dynamically added elements</li>
+                  <li>Simplifies code maintenance</li>
+                  <li>Improves performance for large lists</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div
+            class="collapse collapse-plus bg-base-100 shadow-md hover:shadow-lg transition-shadow rounded-lg"
+          >
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-sm md:text-base lg:text-lg font-semibold text-gray-800 pr-8">
+              What is Event Bubbling in DOM?
+            </div>
+            <div class="collapse-content">
+              <div class="text-xs md:text-sm lg:text-base text-gray-700 leading-relaxed pt-2">
+                <p class="mb-3">
+                  Event bubbling is the process where an event propagates from the target element (where the event occurred) up through its parent elements in the DOM hierarchy, all the way to the document root.
+                </p>
+                <p>
+                  <strong>Example:</strong> When you click a button inside a div, the click event first fires on the button, then bubbles up to the div, then to the body, and finally to the document. This behavior enables event delegation patterns.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 5 -->
+          <div
+            class="collapse collapse-plus bg-base-100 shadow-md hover:shadow-lg transition-shadow rounded-lg"
+          >
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-sm md:text-base lg:text-lg font-semibold text-gray-800 pr-8">
+              How do you create, add, and remove elements using JavaScript?
+            </div>
+            <div class="collapse-content">
+              <div class="text-xs md:text-sm lg:text-base text-gray-700 leading-relaxed pt-2">
+                <div class="space-y-4">
+                  <div>
+                    <p class="font-semibold mb-2">Creating Elements:</p>
+                    <code class="bg-gray-100 px-2 py-1 rounded text-xs md:text-sm block overflow-x-auto">
+                      const element = document.createElement('div');
+                    </code>
+                  </div>
+                  
+                  <div>
+                    <p class="font-semibold mb-2">Adding Elements:</p>
+                    <ul class="list-disc list-inside space-y-2 ml-2">
+                      <li>
+                        <strong>appendChild(element):</strong> Adds a single element as the last child
+                      </li>
+                      <li>
+                        <strong>append(element1, element2, ...):</strong> Adds one or multiple elements/text nodes
+                      </li>
+                      <li>
+                        <strong>prepend():</strong> Adds element as the first child
+                      </li>
+                      <li>
+                        <strong>insertBefore():</strong> Inserts element before a reference node
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <p class="font-semibold mb-2">Removing Elements:</p>
+                    <ul class="list-disc list-inside space-y-2 ml-2">
+                      <li>
+                        <strong>remove():</strong> Removes the element from the DOM
+                      </li>
+                      <li>
+                        <strong>removeChild(element):</strong> Removes a specific child element
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="mt-3 p-3 bg-blue-50 rounded-lg">
+                    <p class="text-xs md:text-sm">
+                      <strong>Key Difference:</strong> appendChild() accepts only one element, while append() can accept multiple elements and text strings.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="collapse collapse-plus bg-base-100 border border-base-300">
-        <input type="radio" name="my-accordion-3" />
-        <div class="collapse-title font-semibold">
-          What is the differences between innerHTML,innerText and textContent?
-        </div>
-        <div class="collapse-content text-sm">
-          textContent is all text contained by an element and all its children
-          that are for formatting purposes only. innerText returns all text
-          contained by an element and all its child elements. innerHtml returns
-          all text, including html tags, that is contained by an element.
-        </div>
-      </div>
-      <div class="collapse collapse-plus bg-base-100 border border-base-300">
-        <input type="radio" name="my-accordion-3" />
-        <div class="collapse-title font-semibold">
-          What is the Event Delegation in DOM?
-        </div>
-        <div class="collapse-content text-sm">
-          Event delegation in JavaScript is a pattern that efficiently handles
-          events. Events can be added to a parent element instead of adding to
-          every single element.
-        </div>
-      </div>
-      <div class="collapse collapse-plus bg-base-100 border border-base-300">
-        <input type="radio" name="my-accordion-3" />
-        <div class="collapse-title font-semibold">
-          What is the Event Bubbling in DOM?
-        </div>
-        <div class="collapse-content text-sm">
-          The process of propagating events from the target element up to its
-          parent elements in the DOM hierarchy.
-        </div>
-      </div>
-      <div class="collapse collapse-plus bg-base-100 border border-base-300">
-        <input type="radio" name="my-accordion-3" />
-        <div class="collapse-title font-semibold">
-          How do you create, add, and remove elements using JavaScript?
-        </div>
-        <div class="collapse-content text-sm font-semibold">
-          1.const p = document.createElement('tagName')
-          2.document.classList.add('text') 3. .appendChild() 4. .append() 5.
-          .remove() 6. .removeChild().
-          The appendChild() method and append() are fairly similar. Both methods add our new element as a the last child of theselected parent element. The appendChild(element) accepts a single argument, that we want to insert, while append(element1, element2, ... elementN) accepts 1 to N elements.
+
+        <!-- Back Button (Mobile Friendly) -->
+        <div class="mt-8 md:mt-12 text-center">
+          <a
+            href="./index.html"
+            class="btn btn-outline btn-primary text-sm md:text-base px-6 md:px-8"
+          >
+            ← Back to Dashboard
+          </a>
         </div>
       </div>
     </section>

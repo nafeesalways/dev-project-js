@@ -30,7 +30,7 @@ btn1.addEventListener("click", function () {
 
   div.innerHTML = `
     <p id ="para1" class="mt-5  font-bold">You have completed the ${title} issue at 10:51:48 PM</p>
-    ` ;
+    `;
   historyContainer.appendChild(div);
 
   btn1.style.backgroundColor = "gray";
